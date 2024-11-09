@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Compressed URL</title>
+    <link rel="stylesheet" th:href="@{/css/urlcompress.css}"/>
+</head>
+<body>
+<a class="mylink" th:if="${compressedUrl != null}" th:href="@{${compressedUrl}}" th:text="'Your compressed URL: ' +  ${compressedUrl}" />
+<p th:if="${errorMessage != null}" th:text="'Result: ' + ${errorMessage}" />
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>UrlForm</title>
+</head>
+<body>
+    <form action="#" th:action="@{/compressUrl}" th:object="${theUrl}" method="POST">
+        <label th:text="URL" />
+        <input th:field="*{urlString}" />
+        <input type="hidden" th:field="*{hashmap}" id="hashmap"/>
+        <input type="submit" value="Submit" />
+
+    </form>
+</body>
+</html>
